@@ -88,7 +88,7 @@ cd
 * Untuk Mengizinkan Root Dan Ubah Password Login di VPS Google Cloud Platform, Aws, Dan Lain-lain
    
 ```html
-  wget -qO- -O vpsroot.sh https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/vpsroot.sh && bash vpsroot.sh
+  wget -qO- -O vpsroot.sh https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/vpsroot.sh && bash vpsroot.sh
   
 ```
   
@@ -99,8 +99,7 @@ cd
 * Install Semua Layanan VPN /Install All VPN Service
    
 ```html
-rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-get update -y && apt-get upgrade && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl unzip && wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/setup.sh && chmod +x setup.sh && sed -i -e 's/\r$//' setup.sh && screen -S setup ./setup.sh
-  
+rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-get update -y && apt-get upgrade && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl unzip && wget https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/setup.sh && chmod +x setup.sh && sed -i -e 's/\r$//' setup.sh && screen -S setup ./setup.sh  
 ```
   
 
@@ -396,3 +395,9 @@ reboot
 <img height=150 src="https://github-readme-stats.vercel.app/api/top-langs/?username=fisabiliyusri&layout=compact&theme=dark">
 <img height=150 src="https://github-readme-stats.vercel.app/api?username=fisabiliyusri&count_private=true&show_icons=true&theme=dark">
 <h2 align="center">
+
+thx
+
+ori https://github.com/fisabiliyusri/Mantap
+
+edit https://github.com/Zuz99/Mantap

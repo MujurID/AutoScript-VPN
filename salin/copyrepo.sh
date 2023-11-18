@@ -7,6 +7,6 @@ sudo apt install git -y
 apt install git -y
 cd
 cd /root/
-git clone https://github.com/fisabiliyusri/Mantap
+git clone https://github.com/MujurID/AutoScript-VPN
 
 cd

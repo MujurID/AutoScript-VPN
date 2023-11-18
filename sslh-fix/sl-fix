@@ -17,10 +17,10 @@ rm -rf menu
 rm updatemenu
 
 cd /usr/bin
-wget -O sslh-fix-reboot "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/sslh-fix/sslh-fix-reboot.sh"
-wget -O restart "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/restart.sh"
-wget -O updatemenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/updatemenu.sh"
-wget -O menu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/menu.sh"
+wget -O sslh-fix-reboot "https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/sslh-fix/sslh-fix-reboot.sh"
+wget -O restart "https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/ssh/restart.sh"
+wget -O updatemenu "https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/update/updatemenu.sh"
+wget -O menu "https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/update/menu.sh"
 
 cd /usr/bin
 chmod +x sslh-fix-reboot

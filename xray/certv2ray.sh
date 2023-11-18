@@ -23,7 +23,8 @@ bash acme.sh --install
 rm acme.sh
 cd .acme.sh
 echo "starting...., Port 80 Akan di Hentikan Saat Proses install Cert"
-bash acme.sh --register-account -m kimochilol@gmail.com
+bash acme.sh --set-default-ca  --server  letsencrypt
+bash acme.sh --register-account -m mujurdotid@gmail.com
 bash acme.sh --issue --standalone -d $domain --force
 bash acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key
 

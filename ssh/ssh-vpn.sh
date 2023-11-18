@@ -14,16 +14,16 @@ LIGHT='\033[0;37m'
 MYIP=$(wget -qO- ipinfo.io/ip);
 # ==================================================
 # Link Hosting Kalian
-akbarvpn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh"
+akbarvpn="raw.githubusercontent.com/MujurID/AutoScript-VPN/main/ssh"
 
 # Link Hosting Kalian Untuk Xray
-akbarvpnn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/xray"
+akbarvpnn="raw.githubusercontent.com/MujurID/AutoScript-VPN/main/xray"
 
 # Link Hosting Kalian Untuk Trojan Go
-akbarvpnnn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/trojango"
+akbarvpnnn="raw.githubusercontent.com/MujurID/AutoScript-VPN/main/trojango"
 
 # Link Hosting Kalian Untuk Stunnel5
-akbarvpnnnn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/stunnel5"
+akbarvpnnnn="raw.githubusercontent.com/MujurID/AutoScript-VPN/main/stunnel5"
 
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
@@ -40,7 +40,7 @@ locality=Indonesia
 organization=infinity
 organizationalunit=infinity
 commonname=localhost
-email=hayuk69@gmail.com
+email=mujurdotid@gmail.com
 
 # simple password minimal
 wget -O /etc/pam.d/common-password "https://${akbarvpn}/password"
@@ -133,6 +133,20 @@ ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
 # set locale
 sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
+
+#OpenSSH
+echo "Port 169" >> /etc/ssh/sshd_config
+echo "Port 99" >> /etc/ssh/sshd_config
+echo "Port 3369" >> /etc/ssh/sshd_config
+echo "Port 2269" >> /etc/ssh/sshd_config
+echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
+echo "X11Forwarding yes" >> /etc/ssh/sshd_config
+echo "AllowTcpForwarding yes" >> /etc/ssh/sshd_config
+echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
+sed -i 's/#AllowTcpForwarding yes/AllowTcpForwarding yes/g' /etc/ssh/sshd_config
+/etc/init.d/ssh restart
+wget -qO- -O /etc/ssh/sshd_config https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/sshd_config
+systemctl restart sshd
 
 # install
 apt-get --reinstall --fix-missing install -y bzip2 gzip coreutils wget screen rsyslog iftop htop net-tools zip unzip wget net-tools curl nano sed screen gnupg gnupg1 bc apt-transport-https build-essential dirmngr libxml-parser-perl neofetch git lsof
@@ -374,7 +388,7 @@ cd /usr/bin
 wget -O addhost "https://${akbarvpn}/addhost.sh"
 wget -O slhost "https://${akbarvpn}/slhost.sh"
 wget -O about "https://${akbarvpn}/about.sh"
-wget -O menu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/menu.sh"
+wget -O menu "https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/update/menu.sh"
 wget -O addssh "https://${akbarvpn}/addssh.sh"
 wget -O trialssh "https://${akbarvpn}/trialssh.sh"
 wget -O delssh "https://${akbarvpn}/delssh.sh"
@@ -421,28 +435,28 @@ wget -O addtrgo "https://${akbarvpnnn}/addtrgo.sh"
 wget -O deltrgo "https://${akbarvpnnn}/deltrgo.sh"
 wget -O renewtrgo "https://${akbarvpnnn}/renewtrgo.sh"
 wget -O cektrgo "https://${akbarvpnnn}/cektrgo.sh"
-wget -O portsshnontls "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/websocket/portsshnontls.sh"
-wget -O portsshws "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/websocket/portsshws.sh"
+wget -O portsshnontls "https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/websocket/portsshnontls.sh"
+wget -O portsshws "https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/websocket/portsshws.sh"
 
-wget -O ipsaya "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/ipsaya.sh"
-wget -O sshovpnmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/sshovpn.sh"
-wget -O l2tpmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/l2tpmenu.sh"
-wget -O pptpmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/pptpmenu.sh"
-wget -O sstpmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/sstpmenu.sh"
-wget -O wgmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/wgmenu.sh"
-wget -O ssmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/ssmenu.sh"
-wget -O ssrmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/ssrmenu.sh"
-wget -O vmessmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/vmessmenu.sh"
-wget -O vlessmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/vlessmenu.sh"
-wget -O grpcmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/grpcmenu.sh"
-wget -O grpcupdate "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/grpcupdate.sh"
-wget -O trmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/trmenu.sh"
-wget -O trgomenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/trgomenu.sh"
-wget -O setmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/setmenu.sh"
-wget -O slowdnsmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/slowdnsmenu.sh"
-wget -O running "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/running.sh"
-wget -O updatemenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/updatemenu.sh"
-wget -O sl-fix "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/sslh-fix/sl-fix"
+wget -O ipsaya "https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/update/ipsaya.sh"
+wget -O sshovpnmenu "https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/update/sshovpn.sh"
+wget -O l2tpmenu "https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/update/l2tpmenu.sh"
+wget -O pptpmenu "https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/update/pptpmenu.sh"
+wget -O sstpmenu "https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/update/sstpmenu.sh"
+wget -O wgmenu "https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/update/wgmenu.sh"
+wget -O ssmenu "https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/update/ssmenu.sh"
+wget -O ssrmenu "https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/update/ssrmenu.sh"
+wget -O vmessmenu "https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/update/vmessmenu.sh"
+wget -O vlessmenu "https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/update/vlessmenu.sh"
+wget -O grpcmenu "https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/update/grpcmenu.sh"
+wget -O grpcupdate "https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/update/grpcupdate.sh"
+wget -O trmenu "https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/update/trmenu.sh"
+wget -O trgomenu "https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/update/trgomenu.sh"
+wget -O setmenu "https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/update/setmenu.sh"
+wget -O slowdnsmenu "https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/update/slowdnsmenu.sh"
+wget -O running "https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/update/running.sh"
+wget -O updatemenu "https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/update/updatemenu.sh"
+wget -O sl-fix "https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/sslh-fix/sl-fix"
 
 chmod +x sl-fix
 chmod +x ipsaya

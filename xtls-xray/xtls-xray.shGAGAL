@@ -44,8 +44,8 @@ mkdir -p /etc/xtls
 # Make Folder XRay
 mkdir -p /var/log/xray/
 #
-wget -q -O /usr/local/bin/geosite.dat "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/grpc/geosite.dat"
-wget -q -O /usr/local/bin/geoip.dat "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/grpc/geoip.dat"
+wget -q -O /usr/local/bin/geosite.dat "https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/grpc/geosite.dat"
+wget -q -O /usr/local/bin/geoip.dat "https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/grpc/geoip.dat"
 
 #
 uuid7=$(cat /proc/sys/kernel/random/uuid)

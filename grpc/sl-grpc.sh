@@ -41,8 +41,8 @@ chmod +x /usr/local/bin/xray
 # Make Folder XRay
 mkdir -p /var/log/xray/
 #
-wget -q -O /usr/local/bin/geosite.dat "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/grpc/geosite.dat"
-wget -q -O /usr/local/bin/geoip.dat "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/grpc/geoip.dat"
+wget -q -O /usr/local/bin/geosite.dat "https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/grpc/geosite.dat"
+wget -q -O /usr/local/bin/geoip.dat "https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/grpc/geoip.dat"
 
 #
 cat > /etc/xray/sl-vmessgrpc.json << END
@@ -194,7 +194,7 @@ systemctl restart sl-vless-grpc
 cd /usr/bin
 
 
-wget -O sl-addgrpc "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/grpc/sl-addgrpc.sh"
+wget -O sl-addgrpc "https://raw.githubusercontent.com/MujurID/AutoScript-VPN/main/grpc/sl-addgrpc.sh"
 chmod +x sl-addgrpc
 chmod +x sl-delgrpc
 chmod +x sl-renewgrpc
